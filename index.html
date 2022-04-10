@@ -34,7 +34,9 @@
             document.getElementById("output").style.color = "red";
             opt2 += 1;
         }
-        document.getElementById("stats").innerHTML = "You've clicked " + clicks + " times, getting option one " + opt1 + " times, and option two " + opt2 + " times.";
+        var percent1 = Math.round(10000*(opt1/clicks))/100;
+        var percent2 = Math.round(10000*(opt2/clicks))/100;
+        document.getElementById("stats").innerHTML = "You've clicked " + clicks + " times, getting option one " + opt1 + " times ("+ percent1 +"%), and option two " + opt2 + " times("+ percent2 +"%).";
     }
     </script>
 
