@@ -38,11 +38,11 @@
         var percent1 = Math.round(10000*(opt1/clicks))/100;
         var percent2 = Math.round(10000*(opt2/clicks))/100;
         var text = "You've clicked " + clicks + " times, getting option one " + opt1 + " times ("+ percent1 +"%), and option two " + opt2 + " times("+ percent2 +"%).<br><br>";
-        if (clicks > 9999){
-            text += "10,000 clicks, impressive. Comment \"Muffins\" if you got this far :)";
-        }else if (clicks > 7500){
+        if (clicks > 5000){
+            text += "5,000 clicks, impressive. Comment \"Muffins\" if you got this far :)";
+        }else if (clicks > 4000){
             text += "Please seek help.";
-        }else if (clicks > 5000){
+        }else if (clicks > 3000){
             text += "I suggest that you touch grass.";
         }else if (clicks > 2000){
             text += "Are you sure this is the best use of your time?";
