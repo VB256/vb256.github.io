@@ -1,24 +1,48 @@
+
 <html>
-<body>
-<p id = "number"> </p>
-<button id = "b" onclick="random();"> Press the button, and one of two things will happen. 
-(1) You gain the power to do anything. (99.9% chance)
-(2) You are eternally damned to the most intolerable pain with no escape. (0.1% chance)
-
-</body>
-<script>
-function random() {
-
-document.getElementById("number").innerHTML = Math.floor(Math.random()*99+1);
-
+<style>
+.content {
+  max-width: 600px;
+  margin: auto;
 }
-</script>
+</style>
+<body>
+<div class="content">
+<p id="clicks">
+<img src="img/button.png" alt="button">
+<br>Press the button, and one of two things will happen. <br>
+&emsp;(1) You gain the power to do anything. (99.9% chance) <br>
+&emsp;(2) You are eternally damned to the most intolerable pain with no escape. (0.1% chance)<br><br>
+&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;<button id = "b" onclick="random();"> Click to press</button> 
+<p id ="output"></p>
+<p id ="stats"></p>
+</div>
+</body>
+    <script>
+    var clicks = 0;
+    var opt1 = 0;
+    var opt2 = 0;
+    function random() {
+        clicks += 1;
+        var rand = Math.floor(Math.random()*999+1);
+        if (rand != 69){
+            document.getElementById("output").innerHTML = "You gain the power to do anything.";
+            document.getElementById("output").style.color = "black";
+            opt1 += 1;
+        }else{
+            document.getElementById("output").innerHTML = "Eternal damnation awaits you.";
+            document.getElementById("output").style.color = "red";
+            opt2 += 1
+        }
+        document.getElementById("stats").innerHTML = "You've clicked " + clicks + " times, getting option one " + opt1 + " times, and option two " + opt2 + " times.";
+    }
+    </script>
 
 <style>
 
-#number{
+#output{
 
-font-size: 90px;
+font-size: 40px;
 
 }
 
