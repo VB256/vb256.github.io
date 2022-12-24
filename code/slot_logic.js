@@ -1,10 +1,10 @@
-var money = 5000;
+var money = 10000;
 var lose = false;
 function slot(mode) {
     if (!lose){
         var rand = Math.random();
         if (mode == 1){
-            if (rand <= 0.5001){
+            if (rand <= 0.51){
                 document.getElementById("output").innerHTML = "+100";
                 document.getElementById("output").style.color = "green";
                 money += 200;
@@ -19,7 +19,7 @@ function slot(mode) {
                 document.getElementById("output").innerHTML = "Insufficient funds.";
                 document.getElementById("output").style.color = "black";
                 money += 1000;
-            }else if (rand <= 0.501){
+            }else if (rand <= 0.525){
                 document.getElementById("output").innerHTML = "+1000";
                 document.getElementById("output").style.color = "green";
                 money += 2000;
@@ -33,7 +33,7 @@ function slot(mode) {
                 document.getElementById("output").innerHTML = "Insufficient funds.";
                 document.getElementById("output").style.color = "black";
                 money += 10000;
-            }else if (rand <= 0.51){
+            }else if (rand <= 0.55){
                 document.getElementById("output").innerHTML = "+10000";
                 document.getElementById("output").style.color = "green";
                 money += 20000;
