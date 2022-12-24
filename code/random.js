@@ -12,7 +12,7 @@ function random() {
     }else{
         document.getElementById("output").innerHTML = "Eternal damnation awaits you.";
         document.getElementById("output").style.color = "red";
-        document.getElementById("button").src = "img/button2.png";
+        document.getElementById("button").src = "img/buttondeath.png";
         opt2 += 1;
     }
     var percent1 = Math.round(10000*(opt1/clicks))/100;

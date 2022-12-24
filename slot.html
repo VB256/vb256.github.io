@@ -1,0 +1,45 @@
+<html>
+<style>
+.content {
+  max-width: 960px;
+  margin: auto;
+}
+</style>
+<body>
+<div class="content">
+<p id="money">Money: $5000</p>
+<p id ="output"></p>
+<div class="row">
+  <div class="column">
+    <img src="img/button1.png" alt="50.01% chance of success" onclick="slot(1);">
+  </div>
+  <div class="column">
+    <img src="img/button2.png" alt="50.1% chance of success" onclick="slot(2);">
+  </div>
+  <div class="column">
+    <img src="img/button3.png" alt="51% chance of success" onclick="slot(3);">
+  </div>
+</div>
+<br>Press a button to try and double your bet. <br>
+</div>
+<script src="code/slot_logic.js"></script>
+</body>
+<style>
+
+#output{
+
+font-size: 40px;
+
+}
+
+.row {
+  display: flex;
+}
+
+.column {
+  flex: 33.33%;
+  padding: 5px;
+}
+
+</style>
+</html>
